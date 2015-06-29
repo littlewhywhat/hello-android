@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.littlewhywhat.hello.android" android:versionCode="1" android:versionName="1.0">
 	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="22"/>
-	<application android:label="Hello">
+	<application 
+		android:icon="@drawable/ic_launcher"
+		android:label="Hello"
+		android:theme="@style/app_theme">
 		<activity android:name=".ui.MainActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
