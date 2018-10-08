@@ -12,8 +12,11 @@ import android.support.test.filters.LargeTest;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static android.support.test.espresso.action.ViewActions.click;
+
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
@@ -25,6 +28,7 @@ public class MainActivityTest {
 
 	@Test
 	public void testTextView() {
-		onView(withId(R.id.hello)).check(matches(withText(HELLO_ANDROID)));
+		onView(withId(R.id.fab)).perform(click());
+    onView(withText(HELLO_ANDROID)).check(matches(isDisplayed()));
 	}
 }
